@@ -4,7 +4,7 @@ async function getWeather(city) {
     try {
         document.getElementById("heading-top").innerHTML = "Weather of : " + city.charAt(0).toUpperCase() + city.slice(1);
 
-        // Location of a city
+        // Location of city
         const location_url = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}`);
         const location = await location_url.json();
 
@@ -86,7 +86,6 @@ document.getElementById("city_name").addEventListener("keypress", function (div)
     if (div.key === "Enter") {
         div.preventDefault();
         city_name = div.target.value;
-        // console.log(`you entered: ${city_name}`);
         getWeather(city_name);
     }
 })
@@ -95,7 +94,6 @@ document.getElementById("city_name").addEventListener("keypress", function (div)
 document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
     city_name = document.getElementById("city_name").value;
-    //   console.log(`Submitted: ${city_name}`);
     getWeather(city_name);
 });
 
