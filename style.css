@@ -5,3 +5,8 @@
 .card:hover{
     transform: scale(1.1);
 }
+#guide{
+    display:none;
+    top: 0px;
+    left: 56px;
+}

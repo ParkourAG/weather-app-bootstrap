@@ -136,6 +136,14 @@ function getWeather_emoji(val) {
         }
     }
 
+    document.getElementById("nav_guide").addEventListener("mouseenter", function () {
+        document.getElementById("guide").style.display="flex";
+        document.getElementById("guide").style.flexDirection="column";
+    })
+    document.getElementById("nav_guide").addEventListener("mouseleave", function () {
+        document.getElementById("guide").style.display="none";
+    })
+
     
     //   0: "Clear sky",
     //   1: "Mainly clear",
